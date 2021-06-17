@@ -1,6 +1,4 @@
-import * as dotenv from 'dotenv';
-
-dotenv.config();
+import {SERVICE_ID} from './utils/env';
 
 console.log('started');
-console.log('SERVICE_ID', process.env.SERVICE_ID);
+console.log('SERVICE_ID', SERVICE_ID);
