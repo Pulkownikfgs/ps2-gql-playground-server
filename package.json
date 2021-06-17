@@ -1,0 +1,17 @@
+{
+  "name": "ps2-gql-playground-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node build/index"
+  },
+  "devDependencies": {
+    "@types/node": "^15.12.2",
+    "typescript": "^4.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^10.0.0"
+  }
+}
