@@ -1,4 +1,12 @@
-import {SERVICE_ID} from './utils/env';
+import {ApolloServer} from 'apollo-server';
+import {typeDefs} from './schema';
+import {resolvers} from './resolvers';
 
-console.log('started');
-console.log('SERVICE_ID', SERVICE_ID);
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+});
+
+server.listen().then(({url}) => {
+  console.log(`🚀  Server ready at ${url}`);
+});
