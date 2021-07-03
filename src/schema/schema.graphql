@@ -4,5 +4,5 @@ type Character {
 }
 
 type Query {
-  characters: [Character]
+  characters(name: String!): [Character]
 }
