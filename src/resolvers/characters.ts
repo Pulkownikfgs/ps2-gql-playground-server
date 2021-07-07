@@ -1,9 +1,12 @@
 import {IFieldResolver} from 'graphql-tools';
-import {getCharacters} from '../data/characters';
+import {IContext} from '../context/interfaces';
 
 export interface CharactersArgs {
   name: string;
 }
 
-export const characters: IFieldResolver<{}, {}, CharactersArgs> = (_, {name}) =>
-  getCharacters(name);
+export const characters: IFieldResolver<unknown, IContext, CharactersArgs> = (
+  _,
+  {name},
+  {censusApi},
+) => censusApi.getCharacters(name);
