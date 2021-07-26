@@ -4,10 +4,11 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "prepare": "husky install",
     "build": "tsc && cp src/schema/schema.graphql build/schema/",
     "start": "node build/index",
     "start:dev": "yarn tsnd --respawn src/index.ts",
+    "lint:types": "tsc --noEmit",
+    "lint:format": "prettier -c 'src/**/*.{js,ts}'",
     "lint": "eslint 'src/**/*.{js,ts}' --max-warnings=0 --fix",
     "test": "jest"
   },
